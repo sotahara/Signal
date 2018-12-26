@@ -1,0 +1,39 @@
+.signal-container{
+  overflow: hidden;
+}
+
+.circle-blue{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: blue;
+  float: left;
+  margin: 20px 5px;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+}
+
+.circle-yellow{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: yellow;
+  float: left;
+  margin: 20px 5px;
+  position: absolute;
+  top: 40px;
+  left: 160px;
+}
+
+.circle-red{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: red;
+  float: left;
+  margin: 20px 5px;
+  position: absolute;
+  top: 40px;
+  left: 320px;
+}

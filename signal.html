@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Traffic Signal</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <button type="button" class="button" id="click">CLICK!</button>
+    <div class="signal-container">
+          <div class="en circle-blue" style="diplay:inline;"></div>
+          <div class="en circle-yellow" style="diplay:inline;"></div>
+          <div class="en circle-red" style="diplay:inline;"></<div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+
+      $(function(){
+        $(".en").toggle(0);
+      });
+
+      function lighting(){
+        setTimeout(function(){
+          $(".circle-blue").fadeIn(1500,function(){
+            $(this).fadeOut(1500)
+              }
+            );
+          },0
+        );
+
+        setTimeout(function(){
+          $(".circle-yellow").fadeIn(750,function(){
+            $(this).fadeOut(750)
+              }
+            );
+          },3000
+        );
+
+        setTimeout(function(){
+          $(".circle-red").fadeIn(1500,function(){
+            $(this).fadeOut(1500)
+              }
+            );
+          },4500
+        );
+
+        setTimeout( function() {
+          lighting();
+        },7500
+        );
+      }
+
+      $(function(){
+        $(".button").click(function(){
+          lighting();
+          var btn = document.getElementById("click");
+          btn.disabled = true;
+        });
+      });
+
+    </script>
+  </body>
+
+</html>
